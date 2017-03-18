@@ -30,5 +30,3 @@ Route::middleware('auth:api')->get('/question/{id}/comments', 'CommentsControlle
 Route::middleware('auth:api')->post('/comment', 'CommentsController@store');
 
 
-Route::middleware('auth:api')->get('/test', 'TestController@test');
-Route::middleware('auth:api')->get('/rebasetest', 'RebaseTestController@test');

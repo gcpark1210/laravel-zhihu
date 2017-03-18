@@ -25,7 +25,8 @@ class MessageController extends Controller
         $message = $this->message->create([
             'from_user_id' => user('api')->id,
             'to_user_id' => request('user'),
-            'body' => request('body')
+            'body' => request('body'),
+            'dialog_id' => time().Auth::id()
         ]);
         if ($message){
             return response()->json(['status' => true]);
